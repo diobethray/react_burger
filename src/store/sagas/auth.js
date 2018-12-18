@@ -3,7 +3,7 @@ import { put, call } from 'redux-saga/effects';
 import axios from 'axios';
 
 import * as actions from '../actions/index';
-import * as keys from '../keys/keys';
+import { firebase } from '../firebase/firebase';
 
 export function* logoutSaga(action) {
     yield call([localStorage, 'removeItem'], 'token');
@@ -24,9 +24,9 @@ export function* authUserSaga(action) {
         password: action.password,
         returnSecureToken: true
     };
-    let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + keys.FIREBASE_KEY;
+    let url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + firebase.FIREBASE_KEY;
     if (!action.isSignup) {
-        url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + keys.FIREBASE_KEY;
+        url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + firebase.FIREBASE_KEY;
     }
     try {
         const response = yield axios.post(url, authData);
