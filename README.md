@@ -3,6 +3,8 @@ Demo app demonstrating the React ecosystem + Redux + Webpack + Firebase and more
 - Bootstraped using [Create React App](https://github.com/facebook/create-react-app).
 - Uses [Firebase](http://firebase.google.com) as the database.
 
+Live Demo: https://react-my-burger-19e9c.firebaseapp.com/burger-builder
+
 ## First thing
 
 ```
