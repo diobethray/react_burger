@@ -30,3 +30,17 @@ Finally, run **npm start** and see if works!
 ```
 npm start
 ```
+
+## Troubleshoot
+If you encounter an error upon running
+```
+TypeError: composeEnhancers is not a function
+```
+Please add an extension on your Chrome browser called [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+It was being used to debug **Redux** data and state
+
+If at first run you got this error:
+```
+Ingredients can't be loaded!
+```
+It means you haven't put your **FIREBASE_URL** and **FIREBASE_KEY** yet mentioned above. Please do so.
